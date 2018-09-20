@@ -17,7 +17,9 @@ class FormulaUtils(object):
     def formula_div(n1, n2):
         return n1 / n2
 
+
 KEY_ERROR = {"Error": "please use key names n1 and n2 of type int"}
+
 
 @app.route("/api/add", methods=['POST'])
 def add_calc():
@@ -68,6 +70,7 @@ def mult_calc():
     except Exception as e:
         return jsonify({"developer_error": e})
 
+
 @app.route("/api/divide", methods=['POST'])
 def div_calc():
     try:
@@ -84,9 +87,6 @@ def div_calc():
         return jsonify({"result": cal_result})
     except Exception as e:
         return jsonify({"developer_error": e})
-
-
-
 
 
 if __name__ == '__main__':
