@@ -3,6 +3,8 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # FOrmula Class that will be used to calcualte the formulas
+
+
 class FormulaUtils(object):
 
     def formula_add(n1, n2):
@@ -22,7 +24,7 @@ KEY_ERROR = {"Error": "please use key names n1 and n2 of type int"}
 
 
 @app.route("/api/add", methods=['POST'])
-def add_calc(): # Route for addition calls
+def add_calc():  # Route for addition calls
     try:
 
         result = request.json
@@ -39,7 +41,7 @@ def add_calc(): # Route for addition calls
 
 
 @app.route("/api/sub", methods=['POST'])
-def sub_calc(): # Route for subtraction calls
+def sub_calc():  # Route for subtraction calls
     try:
 
         result = request.json
@@ -56,7 +58,7 @@ def sub_calc(): # Route for subtraction calls
 
 
 @app.route("/api/multiply", methods=['POST'])
-def mult_calc(): # Route for mutiplication calls
+def mult_calc():  # Route for mutiplication calls
     try:
 
         result = request.json
@@ -72,7 +74,7 @@ def mult_calc(): # Route for mutiplication calls
 
 
 @app.route("/api/divide", methods=['POST'])
-def div_calc(): # Route for division calls
+def div_calc():  # Route for division calls
     try:
 
         result = request.json
